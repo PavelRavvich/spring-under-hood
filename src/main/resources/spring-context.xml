@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation= "http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean class="ru.pravvich.quoters.PostProxyInvokerContextListener"/>
+
+    <bean class="ru.pravvich.quoters.ProfilingHandlerBeanPostProcessor"/>
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+    <bean class="ru.pravvich.quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
+
+    <bean class="ru.pravvich.quoters.TerminatorQuoter" id="terminatorQuoter">
+        <property name="massage" value="I'll be back"/>
+    </bean>
+
+</beans>
