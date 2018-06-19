@@ -1,4 +1,4 @@
-##Схема создания бинов
+# Схема создания бинов
 
     1 BeanDefinitionReader парсит xml и создал BeanDefinition
     
